@@ -1,0 +1,1254 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+:root{
+    --main-color:rgb(105, 34, 34);
+    
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Cairo';
+    direction: rtl;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* // Small / */
+@media (min-width: 576px) {
+.container{ 
+    width: 100px;
+ }
+}
+
+/* // Medium / */
+@media (min-width: 768px) and (max-width: 991.98px) {
+ .container{ 
+   width:750px;
+ }
+}
+/* // Large // */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+ .container{ 
+    width: 970px;
+ }
+}
+
+/* // X-Large // */
+@media (min-width: 1200px) {
+ .container{ 
+width: 1170px;
+}
+}
+
+/* start header style */
+ header {
+    height: 60px;
+    background-color: white;
+    border: 1px solid rgb(243, 239, 239) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+
+    header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+header .container img{
+    width:50px;
+}
+
+header .container nav{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+    header .container nav {
+    justify-content: end;
+    }
+}
+
+header .container nav ul{
+display: flex;
+}
+
+@media (max-width: 768px){
+    header.container nav ul{
+        display: none;
+    }
+}
+
+.nav-tog:hover {
+ color: var(--main-color);
+}
+
+.mobile-nav1 {
+   display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top:100%;
+    left:0px;
+    width: 100%;
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+
+@media (min-width: 768px) {
+    .nav-tog{
+        display: none;
+    }
+}
+
+header .container nav ul li a{
+ display: block;
+ padding:20px 10px;
+ font-size:16px;
+ font-weight:700;
+ color:var(--main-color);
+}
+
+@media (max-width: 768px ){
+    header .container nav ul li a{
+        border-bottom: 1px solid rgb(238, 236, 236);
+    }
+}
+
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover {
+    color: white;
+    background-color: rgb(196, 97, 97);
+    border-radius: 10px;
+}
+
+ header .container .social {
+    display: flex;
+    justify-content:space-between;
+
+}
+@media (max-width:768px ) {
+ header.container .social {
+    display: none;
+}
+}
+
+header .container .social i {
+    margin: 5px;
+    font-size: 17px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container .social i:hover{
+    background-color: rgb(190, 88, 88);
+    scale: 1.2;
+}
+
+/* end header style */
+
+
+/* start hero section style */ 
+
+.hero{
+    background-image: url("../css/imges/bac.jpg");
+/* height: calc(70vh - 60px); */
+}
+
+@media (max-width: 768px ) {
+.hero {
+        /* height: calc(100vh - 60px); */
+    }
+}
+
+.hero .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column-reverse;
+        
+    }
+}
+
+.hero .container .hero-imge img{
+    width:500px
+}
+
+@media( max-whdth: 768px){
+    .hero .container .hero-imge img {
+width: 350px;
+    }
+}
+
+.hero .container .hero-titell{
+color: var(--main-color);
+font-size: 45px;
+font-weight: 800;
+
+}
+
+
+.hero .container .hero-info h2 {
+    coolor: rgb(194, 98, 98);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero .container .hero-info p {
+font-size: 18px;
+line-height: 1.8;
+margin-bottom: 20px;
+width: 90%;
+}
+
+@media(max-width: 786px) {
+    .hero .container .hero-titell{
+font-size: 35px;
+text-align: center;
+    }
+    .hero .container .hero-info h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .hero .container .hero-info p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+.hero .container .social{
+    display: flex;
+    
+}
+
+.hero .container .social i{
+    margin: 5px;
+    font-size: 17px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hero .container .social i:hover {
+    background-color: rgb(190, 88, 88);
+}
+
+@media (max-width: 768px) {
+    .hero .container .social {
+        justify-content: center;
+    }
+}
+
+.hero .container .hero-info .colll {
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+   
+}
+
+@media (max-width:768px ) {
+    .hero .container .hero-info .colll{
+        justify-content: center;
+    }
+}
+.hero .container .hero-info .colll button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    margin:20px;
+    transition: 0.3s;
+}
+
+.hero .container .hero-info .colll button:hover {
+cursor: pointer;
+background-color: rgb(197, 95, 95);
+scale: 1.1;
+}
+
+
+/* end hero section style */ 
+
+
+/* start servicis section style */ 
+.service {
+    background-color: #eee;
+    padding: 50px 0;
+}
+
+.section-titell {
+    text-align: center;
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    font-family: almarai;
+}
+
+.section-desc {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.all-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px ,1fr));
+    gap: 15px;
+}
+
+.all-services .service {
+    background-color: rgba(226, 219, 219, 0.774);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 50px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.all-services .service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0%;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.all-services .service::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0%;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+ .all-services .service:hover::before { 
+height: 100%;
+}
+
+.all-services .service:hover::after {
+height: 100%;
+}
+
+.all-services .service:hover {
+    transform: translateY(-10px);
+}
+
+.all-services .service img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.all-services .service h3 {
+margin-bottom: 15px;
+color: var(--main-color);
+
+}
+
+.all-services .service p {
+line-height: 1.5;
+}
+/* end servisice section style */ 
+
+
+/* start about section style */ 
+
+.about-us {
+    padding: 50px 0;
+}
+
+.about-us .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-info, 
+.about-img {
+    width: 50%;
+}
+
+
+.about-us h2 {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 17px;
+    line-height: 1.6;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.about-us .call-7 {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .about-us .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-info, 
+.about-img {
+    width: 50%;
+}
+.about-us p {
+    width: 100%;
+}
+.about-us .call-7 {
+    margin-bottom: 25px;
+}
+}
+
+
+.about-us .call-7::before {
+    position: absolute;
+    content:'' ;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(17, 15, 15);
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.about-us .call-7::after {
+    position: absolute;
+    content:'' ;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: rgb(17, 15, 15);
+    transition: 0.5s;
+    z-index: -1;
+}
+.about-us .call-7:hover::before {
+    width: 50%;
+}
+
+.about-us .call-7:hover::after {
+    width: 50%;
+}
+
+.about-us .about-img img {
+    transform: translatey(-10px , -10px);
+    width: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+/* end about section style */ 
+
+/* start قسم الاحصائيات */
+.statistics {
+    background-color: #eee;
+    padding: 70px 0;
+    background-image: url("../css/imges/iconbac.png");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.statistics .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.statistics .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.statistics .container .stat {
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 50px 0;
+    width: 250px;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.statistics .container .stat:hover {
+    scale: 1.1;
+    background-color: rgba(230, 225, 225, 0.5);
+}
+
+.statistics .container .stat h3 {
+    font-size: 35px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+.statistics .container .stat p {
+    font-size: 20px;
+    color: black;
+    font-weight: 800px;
+}
+
+/* end قسم الاحصائيات */
+
+/*start قسم المنتجات*/
+
+.phones {
+    padding: 70px 0;
+    background-color: #eee;
+}
+
+.phones .all-phones {
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+gap: 10px;
+}
+
+.phones .all-phones .phone {
+    background-color: rgb(230, 225, 225 0);
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 50px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.phones .all-phones .phone:hover {
+    transform: scale(1.03);
+}
+.phones .all-phones .phone img {
+    width: 100%;
+    height: 200px;
+}
+
+.phones .all-phones .phone .phone-titell {
+    font-size: 20px;
+    color: var(--main-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.phones .all-phones .phone p {
+    color: rgb(134, 127, 127);
+    line-height: 1,7;
+    margin-bottom: 15px;
+     padding-left: 15px;
+    padding-right: 15px;
+}
+
+.phones-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.phones-price div :last-child {
+    color: var(--main-color);
+    font-weight: 700px;
+    text-decoration: line-through;
+
+}
+
+.phones-price :last-child {
+font-size: 20px;
+font-weight: 700px;
+}
+
+hr {
+    width: 80%;
+    transform: translateX(-10%);
+    margin-bottom: 15px;
+    border: none;
+    height: 1px;
+    background-color: rgb(230, 225, 225);
+}
+
+.phones-detail {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.phones-detail:hover {
+    background-color: rgb(197, 95, 95);
+    scale: 1.1;
+}
+
+.category {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.phones-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.phones-info i {
+    margin-left: 10px;
+}
+
+/* end قسم الاحصائيات */
+
+/* start قسم البورتوفيلو*/
+
+.portofolio {
+    padding: 70px 0;
+    background-color: #eee;
+}
+
+.portofolio .port-container {
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+gap: 15px;
+}
+
+.box {
+    text-align: center;
+    border: 1px solid rgb(230, 225, 225);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+}
+
+.box img {
+    max-width: 100%;
+    height: 200px;
+    width: 180px;
+}
+
+.port-container .box .info {
+background-color: rgba(255, 252, 252, 0.829);
+padding: 15px 0;
+position: absolute;
+width: 100%;
+top:0;
+left: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+transition: 0.3s;
+}
+.port-container .box:hover .info {
+    left: 0;
+}
+.box .info h3 {
+    font-size: 20px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.link-pro {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70px;
+    margin: auto;
+    transition: 0.3s;
+}
+/* end قسم البورتوفيلو*/
+
+/* srart قسم الشركات */
+
+.aour-comp {
+    background-color: #eee;
+    padding: 70px 0;
+}
+
+.company {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 15px;
+}
+
+.comp-box {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #6e6e6e;
+}
+
+.comp-box:hover {
+    transform: translateY(-10px);
+}
+
+.img-social {
+display: flex;
+justify-content: space-between;
+}
+
+.img-social .social {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-right: 5px;
+padding-top: 10px;
+}
+
+.img-social .social i {
+    margin: 4px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-social .social i:hover {
+    background-color: rgb(190, 88, 88);
+}
+.img-social img {
+    width: 200px;
+    height: 200px;
+    border-radius: 0 0 15px;
+    filter: grayscale(100%);
+}
+
+.comp-box:hover img {
+filter: grayscale(0);
+}
+.company-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+}
+
+.company-info h3 {
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+/* end قسم الشركات */
+
+
+/* statr قسم */
+.our-skils {
+    padding: 70px 0;
+    background-color: #eee;
+    background-image: url(../css/imges/scallbac.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.our-skils .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skils-info,
+.skils-img {
+    width: 45%;
+}
+
+@media (max-width: 768px) {
+    .our-skils .container {
+        flex-direction: column-reverse;
+    }
+    .skils-info,
+.skils-img {
+    width: 100%;
+}
+}
+
+.skils-img img {
+    width: 100%;
+    border-radius: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skils-img img:hover {
+filter: grayscale(100%);
+}
+
+.count {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.count :last-child {
+color: var(--main-color);
+border: 1px solid rgb(167, 165, 165);
+padding: 2px 3px;
+border-radius: 2px;
+}
+
+.progress .prog {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(150, 147, 147);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress .prog span {
+    position: absolute;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.progress .prog span:hover {
+    width: 100% !important;  
+}
+
+/* end قسم */
+
+/* بداية قسم الخطط */
+.pric-section {
+    padding: 70px 0;
+    background-color: #eee;
+}
+
+.pric-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 15px;
+}
+
+.plan {
+    background-color: white;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.plan:hover {
+    scale: 1.05;
+}
+
+.plan:nth-child(1):before,
+.plan:nth-child(3):before  {
+    content: 'مميزاتنا';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background-color: blue;
+    top: 10px;
+    left: -60px;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.plan .plan-title {
+    font-size: 20px;
+    color: var(--main-color);
+    margin-top: 23px;
+    padding: 8px;
+}
+
+.plan .price p:first-child {
+ color: var(--main-color);
+ font-size: 35px;
+ font-weight: bold;
+}
+
+.plan .price p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.plan img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+.plan ul {
+    text-align: right;
+    padding: 15px;
+}
+
+.plan ul li {
+    padding: 15px;
+    padding-right: 20px;
+    border-radius: 1px solid #eee;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.plan ul li::before {
+content: '/';
+font-family: "font awsom 5 free" ;
+font-weight: 900;
+/* width: 5px;
+height: 5px; */
+color: var(--main-color);
+top: 50%;
+transform: translate(-50%);
+right: 0;
+position: absolute;
+}
+
+.plan ul li:hover {
+    background-color: #eee;
+}
+
+.plan-btn {
+    background-color: var(--main-color);
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.plan-btn:hover {
+scale: 1.0s;
+background-color: rgb(190, 88, 88);
+}
+
+/* نهاية قسم الخطط */
+
+.testimonias {
+    padding: 70px 0;
+}
+
+.testimonias .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    gap: 20px;
+}
+
+.testimonias .container .testimonial {
+    background-color: #eee;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.testimonias .container .testimonial:hover {
+    transform: translatex(-5px);
+}
+
+.testimonias .container .testimonial::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    height: 0;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.testimonias .container .testimonial::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.testimonias .container .testimonial:hover::after {
+    width: 50%;
+}
+
+.testimonias .container .testimonial:hover::before {
+    height: 50%;
+}
+
+.testimonias .container .testimonial img {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    border-radius: 50px;
+    left: 5px;
+    top: -20px;
+    border: 7px solid white;
+}
+.testimonias .container .testimonial h3 {
+    color: var(--main-color);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.testimonias .container .testimonial .title-testimonial {
+    margin-bottom: 15px;
+}
+
+.testimonias .container .testimonial .stars .fill {
+    color: rgb(252, 252, 5);
+}
+
+.testimonias .container .testimonial .review {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* 
+بداية قسم الفوتر */
+
+footer {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-color: rgb(90, 87, 87);
+    background-image: url( );
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 5px solid var(--main-color);
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 15px;
+}
+
+footer .container .section h2 {
+    color: white;
+}
+
+@media(max-width: 768px) {
+    footer .container .section {
+        padding-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+footer .container .section p {
+    color: white;
+    margin-top: 15px;
+    line-height: 1.8;
+    width: 90%;
+}
+
+footer .container .section a {
+    color: white;
+    display: block;
+    margin-top: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+footer .container .section a::after {
+    content: '\f0d9';
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    position: absolute;
+    color: var(--main-color); 
+    top: 50%;
+    font-size: 20px;
+    right: -15px;
+    transform: translatey(-50%);
+
+}
+
+footer .container .section a:hover {
+    color: var(--main-color);
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.letear form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.letear form input[type ="text"],
+.letear form input[type ="email"] {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    caret-color: var(--main-color);
+}
+
+.letear form input[type ="text"]:focus,
+.letear form input[type ="email"]:focus {
+    outline: none;
+}
+
+.letear form input[type ="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.letear form input[type ="submit"]:hover {
+    background-color: black;
+    border: 1px solid var(--main-color);
+}
+
+.hr-foot {
+    width: 70%;
+    margin-top: 30px;
+    transform: translatex(-15px);
+}
+
+.copyrihght {
+    text-align: center;
+    color: white;
+}
+/* نهاية قسم الفوتر */
+
+.btn-whats {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #25d336;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 0 3px #eee;
+}
+
+.btn-whats:hover {
+    scale: 1.1;
+}
+
+.btn-whats i {
+    font-size: 35px;
+}
